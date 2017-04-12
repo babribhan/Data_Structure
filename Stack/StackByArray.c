@@ -143,3 +143,4 @@ int main()
         char exp[] ="A+B*(C^D-E)^(F+G*H)-I";
         inFixToPostFix(exp);
   return 0;
+}
