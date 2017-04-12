@@ -147,9 +147,9 @@ int main(void)
   int i ;
   for ( i = 0 ; i < MAX ; ++i)
   hashTable[i].head = NULL;
-  insert(hashTable,1,104845,"BABRIBHAN",300,2.4,"C++");
-  insert(hashTable,31,104840,"BABRI",250,3,"JAVA");
-  insert(hashTable,41,104841,"JANGRA",250,3.5,"SQL");
+  insert(hashTable,1,104,"Alice",300,2.4,"C++");
+  insert(hashTable,31,105,"Bob",250,3,"JAVA");
+  insert(hashTable,41,104841,"John",250,3.5,"SQL");
   printTable(hashTable);
   search(hashTable,3);
   search(hashTable,1);
