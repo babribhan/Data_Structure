@@ -78,17 +78,8 @@ Enqueue(cq , 4);
 Dequeue(cq);
 Dequeue(cq);
 Dequeue(cq);
-
 printf("Front Element of the CQ is : [%d].\n",getFront(cq));
 printf("Rear Element of the CQ is : [%d].\n",getRear(cq));
-
-i
-
-
-
-
-
-
 return 0;
 }
 
