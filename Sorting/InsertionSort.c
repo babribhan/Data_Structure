@@ -1,12 +1,5 @@
 // Insertion Sort Algorithm
 #include <stdio.h>
-void swap(int *a , int *b)
-{
-  *a = *a^*b;
-  *b = *a^*b;
-  *a = *a^*b;
-}
-
 void InsertionSort(int *list , int n , int order)
 {
   // order 1 means sort in decresing order.
