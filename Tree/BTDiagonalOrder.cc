@@ -1,4 +1,4 @@
-void Tree::diagonalOrder(){
+void diagonalOrder(){
   if (!root) return ;
   std::queue<Node*> q;
   q.push(root);
