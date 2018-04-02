@@ -159,16 +159,16 @@ pnode_t insert(pnode_t root, int val) {
 	return tree_balance(current);	
 }
 pnode_t tree_balance_del(pnode_t root){
-	if ( get_balance(root) == 2 ) {  // CASE : DELETION FROM RIGHT SUB TREE OF ROOT.
-		if ( get_balance(root->left) >= 0  ) {  // RIGHT RIGHT CASE  
+	if ( get_balance(root) == 2 ) {  // CASE : DELETION FROM RIGHT SUB TREE OF ROOT. SO WE BALANCE THE LEFT SUBTREE.
+		if ( get_balance(root->left) >= 0  ) {  // LEFT LEFT DELETION CASE  
 			return rotate_right(root);
 		}
-		else if ( get_balance(root->left) < 0 ) {
+		else if ( get_balance(root->left) < 0 ) { //  LEFT RIGHT DELETION CASE
 			rotate_left(root->left);
 			root = rotate_right(root);
 		}
 	}
-	if ( get_balance(root) == -2 ) {  // CASE : DELETION FROM LEFT SUB TREE FROM ROOT.
+	if ( get_balance(root) == -2 ) {  // CASE : DELETION FROM LEFT SUB TREE OF ROOT. SO WE BALANCE THE RIGHT SUBTREE.
 		if ( get_balance(root->right) <= 0  ) {  //RIGHT RIGHT CASE.
 			return rotate_left(root);
 		}
