@@ -1,4 +1,4 @@
-bool binarySearch1(int arr[],int start , int end, int key){
+bool binarySearch(int arr[],int start , int end, int key){
   while( end >= start ) {
     int mid = start +((end-start)>>1);
     if (!(arr[mid]^key))
