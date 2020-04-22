@@ -8,15 +8,6 @@
    case it will take O(n) time.
 */
 
-void swap (int &a, int &b)
-{
-  if (a^b)
-  {
-    a= a^b;
-    b= a^b;
-    a= a^b;
-  }
-}
 void bubbleSortOpt (int arr[], int n ) 
 {
   bool swapped = false;
@@ -26,7 +17,7 @@ void bubbleSortOpt (int arr[], int n )
     {
       if ( arr[j] > arr[j+1])
       {
-        swap (arr[j],arr[j+1]);
+        std::swap (arr[j], arr[j+1]);
         swapped = true;
       }
     }
