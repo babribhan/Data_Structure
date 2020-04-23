@@ -1,7 +1,12 @@
-void merge(vector<int> &arr, int start , int mid, int end ){
+// Merge Sort Time complexity is O(N.log N) in all three cases.
+//           { O(1)           if n <= 1
+//   T(n)  = | 2T(n/2) + cn   otherwise
+//           {
+void merge (vector<int> &arr, int start , int mid, int end )
+{
         int i , j , k;
-        int n1 = mid-start+1;
-        int n2 = end-mid;
+        int n1 = mid - start+1;
+        int n2 = end - mid;
         int left[n1];
         int right[n2];
         for ( int i = 0; i < n1 ; i++ )
@@ -31,8 +36,10 @@ void merge(vector<int> &arr, int start , int mid, int end ){
         }
 }
 
-void mergeSort(vector<int> &arr, int start , int end ) {
-        if ( start < end ) {
+void merge_sort (vector<int> &arr, int start , int end ) 
+{
+        if ( start < end ) 
+        {
                 int mid = (start + (end - start )/2 ) ;
                 mergeSort(arr,start,mid);
                 mergeSort(arr,mid+1,end);
