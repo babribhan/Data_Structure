@@ -1,16 +1,21 @@
 // Insertion Sort Algorithm
 
-void insertion_sort (int arr[], int n )
+void insertion_sort (int *Ar, int size)
 {
-  for ( int i = 0; i < n;++i)
+  if ( size == 0 || size == 1 || !Ar ) return;
+  
+  int element_chosen, sorted_high_index;
+  for ( int unsorted_low_index = 1; unsorted_low_index < size; unsorted_low_index++ )  //traverse the unsorted list.
   {
-    int temp = arr[i];
-    int j = i;
-    while (j > 0 && temp < arr[j-1])
+    element_chosen = Ar[unsorted_low_index];
+    sorted_high_index = unsorted_low_index;
+    while ( sorted_high_index > 0 && element_chosen < Ar[sorted_high_index-1] ) //traverse the sorted list.
     {
-      arr[j] = arr[j-1];
-      j--;
+        Ar[sorted_high_index] = Ar[sorted_high_index-1];
+        sorted_high_index--;
     }
-    arr[j] = temp;
+     Ar[sorted_high_index] = element_chosen;
+      
   }
+  
 }
