@@ -8,7 +8,7 @@
    case it will take O(n) time.
 */
 
-void bubbleSortOpt (int arr[], int n ) 
+void bubble_sort (int arr[], int n ) 
 {
   bool swapped = false;
   for ( int i = 0; i < n;++i)
