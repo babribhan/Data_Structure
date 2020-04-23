@@ -8,7 +8,7 @@
     Therefore (N-1) + (N-2) +....+ 1 = (N.(N-1))/2 comparisons and N swaps result in the overall complexity of .O(N2)
 */
 
-void selectionSort (int arr[], int n )
+void selection_sort (int arr[], int n )
 {
   int minimum; // hold the position of minimum element in array.
   for ( int i = 0; i < n;++i)
