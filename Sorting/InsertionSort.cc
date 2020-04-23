@@ -1,5 +1,6 @@
 // Insertion Sort Algorithm
-
+// Best Case Complexity = Avg Case Complexity = Worst Case Complexity = O(N2)
+// 
 void insertion_sort (int *Ar, int size)
 {
   if ( size == 0 || size == 1 || !Ar ) return;
