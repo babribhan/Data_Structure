@@ -36,8 +36,8 @@ void merge_sort (vector<int> &arr, int start , int end )
         if ( start < end ) 
         {
                 int mid = (start + (end - start )/2 ) ;
-                mergeSort(arr,start,mid);
-                mergeSort(arr,mid+1,end);
-                merge(arr,start,mid,end);
+                merge_sort (arr,start,mid);
+                merge_sort (arr,mid+1,end);
+                merge (arr,start,mid,end);
         }
 }
